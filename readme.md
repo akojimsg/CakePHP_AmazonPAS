@@ -14,12 +14,12 @@ These are issued by Amazon when you [sign up for AWS](http://aws.amazon.com)
 
 ## Installation ##
 
-The plugin is pretty easy to set up, all you need to do is to copy it to you application Plugin folder.
+The plugin is pretty easy to set up, all you need to do is to copy the Amazon to your application as the app/Plugin/Amazon folder.
 
 You will need to set the 3 Amazon values detailed above in the file Plugin/Amazon/Config/aws.php and copy that file to your app/Config directory and you are ready to go.
 
 ## How to use it ##
-The AmazonPAS interface is a controller component, so all you have to do is include it in your component. 
+The AmazonPAS interface is a controller component, so all you have to do is include it in your controller. 
 
     class MyController extends AppController {
         public $components = array( 'Amazon.Pas' );

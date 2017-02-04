@@ -12,6 +12,7 @@ class PasComponent extends Object {
 	const LOCALE_FRANCE = 'fr';
 	const LOCALE_GERMANY = 'de';
 	const LOCALE_JAPAN = 'jp';
+	const LOCALE_MEXICO = 'mx';
 	
 	/**
 	 * Property: locale
@@ -137,43 +138,47 @@ class PasComponent extends Object {
 	 * Set the locale to use
 	 * @param String $locale LOCALE_CANADA, LOCALE_FRANCE, LOCALE_GERMANY, LOCALE_JAPAN, LOCALE_UK or LOCALE_US
 	 */
-	public function setLocale($locale = null)
-	{
-		$this->locale = $locale;
-		// Determine the hostname
-		switch ($locale)
-		{
-			// United Kingdom
-			case self::LOCALE_UK:
-				$this->AWSEndPoint = 'ecs.amazonaws.co.uk';
-				break;
+    public function setLocale($locale = null)
+    {
+        $this->locale = $locale;
+        // Determine the hostname
+        switch ($locale) {
+            // United Kingdom
+            case self::LOCALE_UK:
+                $this->AWSEndPoint = 'webservices.amazon.co.uk';
+                break;
 
-			// Canada
-			case self::LOCALE_CANADA:
-				$this->AWSEndPoint = 'ecs.amazonaws.ca';
-				break;
+            // Canada
+            case self::LOCALE_CANADA:
+                $this->AWSEndPoint = 'webservices.amazon.ca';
+                break;
 
-			// France
-			case self::LOCALE_FRANCE:
-				$this->AWSEndPoint = 'ecs.amazonaws.fr';
-				break;
+            // France
+            case self::LOCALE_FRANCE:
+                $this->AWSEndPoint = 'webservices.amazon.fr';
+                break;
 
-			// Germany
-			case self::LOCALE_GERMANY:
-				$this->AWSEndPoint = 'ecs.amazonaws.de';
-				break;
+            // Germany
+            case self::LOCALE_GERMANY:
+                $this->AWSEndPoint = 'webservices.amazon.de';
+                break;
 
-			// Japan
-			case self::LOCALE_JAPAN:
-				$this->AWSEndPoint = 'ecs.amazonaws.jp';
-				break;
+            // Japan
+            case self::LOCALE_JAPAN:
+                $this->AWSEndPoint = 'webservices.amazon.co.jp';
+                break;
 
-			// Default to United States
-			default:
-				$this->AWSEndPoint = 'ecs.amazonaws.com';
-				break;
-		}
-	}
+            // Japan
+            case self::LOCALE_MEXICO:
+                $this->AWSEndPoint = 'webservices.amazon.com.mx';
+                break;
+
+            // Default to United States
+            default:
+                $this->AWSEndPoint = 'webservices.amazon.com';
+                break;
+        }
+    }
 	
 	/**
 	 * Lookup a specific Item
